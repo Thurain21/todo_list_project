@@ -1,10 +1,8 @@
 import React from "react";
-import Form from "./Form";
 
 const List = () => {
   return (
     <div>
-      <Form />
       <div className="w-50 mx-auto">
         <ol className="list-group mt-3">
           <li className="list-group-item mt-4 shadow p-3 mb-5 bg-body rounded">
