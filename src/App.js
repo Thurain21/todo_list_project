@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import List from './components/List';
@@ -7,17 +7,25 @@ import { apidata } from './api/apiResource';
 
 const App = () => {
 
+    const [task , setTask] = useState([]);
     const fetchdata = async() => {
-        const data = await apidata.create('/todolist');
+        const data = await apidata.get('/todolist');
 
-        console.log(data);
+        setTask(data);
         
     } 
+
+    useEffect(()=>{
+      fetchdata()
+    },[])
+
+    console.log(task);
+    
 
   return (
     <div className='mt-5'>
       <Form/>
-        <List/>
+        <List tasks={task}/>
     </div>
   )
 }
