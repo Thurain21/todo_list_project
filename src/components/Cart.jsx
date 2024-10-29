@@ -1,20 +1,25 @@
-import React from 'react'
+import React from "react";
 
-const Cart = ({data}) => {
+const Cart = ({ tasks }) => {
 
-    console.log(data);
-    
+  
+
   return (
-    
     <div>
-        <li className="list-group-item mt-4 shadow p-3 mb-5 bg-body rounded">
+        {
+          tasks.map((task) => (
+            <li key={task.id} className="list-group-item shadow p-3 mb-2 bg-body rounded">
           <div className="row ">
-          <div className="col-11">Tasks Message</div>
-              <div className="col-1"><i className="fa-solid fa-trash"></i></div>
+            <div className="col-11">{task.task}</div>
+            <div className="col-1">
+              <i className="fa-solid fa-trash"></i>
             </div>
-          </li>
+          </div>
+        </li>
+          ))
+        }
     </div>
-  )
+  );
 }
 
-export default Cart
+export default Cart;
