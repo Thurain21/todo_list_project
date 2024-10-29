@@ -1,24 +1,29 @@
 {
-    "todolist" : [
-        {
-            "id" : 1,
-            "tasks" : "Learn react framework",
-            "complete" : false
-        },
-        {
-            "id" : 2,
-            "tasks" : "Cleaning Room",
-            "complete" : true
-        },
-        {
-            "id" : 3,
-            "tasks" : "Sleeping 6 hours",
-            "complete" : true
-        },
-        {
-            "id" : 4,
-            "tasks" : "Doing workout",
-            "complete" : false
-        }
-    ]
+  "todolist": [
+    {
+      "id": "1",
+      "task": "Learn react framework",
+      "complete": false
+    },
+    {
+      "id": "2",
+      "task": "Cleaning Room",
+      "complete": true
+    },
+    {
+      "id": "3",
+      "task": "Sleeping 6 hours",
+      "complete": true
+    },
+    {
+      "id": "4",
+      "task": "Doing workout",
+      "complete": false
+    },
+    {
+      "id": 232,
+      "task": "Testing",
+      "complete": false
+    }
+  ]
 }
