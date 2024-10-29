@@ -9,22 +9,35 @@ const App = () => {
 
     const [task , setTask] = useState([]);
     const fetchdata = async() => {
-        const data = await apidata.get('/todolist');
+        const reqdata = await apidata.get('/todolist');
 
-        setTask(data);
+        setTask(reqdata.data)
+        
         
     } 
 
     useEffect(()=>{
       fetchdata()
     },[])
-
-    console.log(task);
     
+    const submitTask = async(userTask) =>{
+      
+      const postdata = {
+        id : 232,
+        task : userTask,
+        complete : false
+      }
+
+      const res = await apidata.post('todolist',postdata)
+
+      console.log(...task,res.data);
+      
+      
+    }
 
   return (
     <div className='mt-5'>
-      <Form/>
+      <Form submitTask={submitTask}/>
         <List tasks={task}/>
     </div>
   )
