@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Form = () => {
+const Form = ({submitTask}) => {
+
+  const [userTask,setUserTask] = useState('');
+
+  
+
   return (
     <div>
       
@@ -8,13 +13,16 @@ const Form = () => {
         <h3 className="mb-4">React Todo List</h3>
         <div className="col">
           <input
+            value={userTask}
+            onChange={ e => setUserTask(e.target.value)}
             type="text"
+            id="task"
             className="form-control"
             placeholder="Enter Tasks"
           />
         </div>
         <div className="col">
-          <button className="btn btn-primary">
+          <button  type="button" onClick={()=> submitTask(userTask)} className="btn btn-primary">
             Add Tasks
           </button>
         </div>
