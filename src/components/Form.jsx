@@ -4,7 +4,10 @@ const Form = ({submitTask}) => {
 
   const [userTask,setUserTask] = useState('');
 
-  
+  const formHandlingSubmit = () => {
+    submitTask(userTask)
+    setUserTask('')
+  }
 
   return (
     <div>
@@ -22,7 +25,7 @@ const Form = ({submitTask}) => {
           />
         </div>
         <div className="col">
-          <button  type="button" onClick={()=> submitTask(userTask)} className="btn btn-primary">
+          <button  type="button" onClick={()=> formHandlingSubmit()} className="btn btn-primary">
             Add Tasks
           </button>
         </div>

@@ -1,10 +1,10 @@
 import React from "react";
 
-const Cart = ({ tasks }) => {
+const Cart = ({ tasks,deleteTask }) => {
 
   
 
-  return (
+   return (
     <div>
         {
           tasks.map((task) => (
@@ -12,7 +12,7 @@ const Cart = ({ tasks }) => {
           <div className="row ">
             <div className="col-11">{task.task}</div>
             <div className="col-1">
-              <i className="fa-solid fa-trash"></i>
+              <i className="fa-solid fa-trash" onClick={() => deleteTask(task.id)}></i>
             </div>
           </div>
         </li>
