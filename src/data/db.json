@@ -1,28 +1,18 @@
 {
   "todolist": [
     {
-      "id": "1",
-      "task": "Learn react framework",
-      "complete": false
-    },
-    {
       "id": "2",
       "task": "Cleaning Room",
       "complete": true
     },
     {
-      "id": "3",
-      "task": "Sleeping 6 hours",
-      "complete": true
-    },
-    {
-      "id": "4",
-      "task": "Doing workout",
+      "id": "0fd625f5-d9e8-499e-909f-81a7c2e9585c",
+      "task": "Watching News daily",
       "complete": false
     },
     {
-      "id": 232,
-      "task": "Testing",
+      "id": "d02ba406-d5eb-4f37-9fc4-c0f4d8a51a0b",
+      "task": "Learning Spring boots",
       "complete": false
     }
   ]
