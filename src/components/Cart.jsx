@@ -1,6 +1,6 @@
 import React from "react";
 
-const Cart = ({ tasks,deleteTask }) => {
+const Cart = ({ tasks,deleteTask,updateTask }) => {
 
   
 
@@ -8,9 +8,9 @@ const Cart = ({ tasks,deleteTask }) => {
     <div>
         {
           tasks.map((task) => (
-            <li key={task.id} className="list-group-item shadow p-3 mb-2 bg-body rounded">
+            <li key={task.id} className = {task.complete == true ? "list-group-item  shadow bg-success p-3 mb-2 rounded " : "list-group-item shadow p-3 mb-2 rounded bg-info "}>
           <div className="row ">
-            <div className="col-11">{task.task}</div>
+            <div className="col-11"><input type="checkbox" onChange={() => updateTask(task.id, !task.complete)} checked={task.complete} />{task.task}</div>
             <div className="col-1">
               <i className="fa-solid fa-trash" onClick={() => deleteTask(task.id)}></i>
             </div>
