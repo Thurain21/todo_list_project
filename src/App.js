@@ -26,24 +26,22 @@ const App = () => {
     };
 
     await apidata.post("todolist", postdata);
-
   };
 
-  const deleteTask = async(task_id) => {
-    
-    await apidata.delete(`todolist/${task_id}`)
+  const updateTask = async (task_id, complete) => {
+    await apidata.patch(`todolist/${task_id}`, { complete });
+  };
 
-  }
-    
-    
-  
+  const deleteTask = async (task_id) => {
+    await apidata.delete(`todolist/${task_id}`);
+  };
 
   return (
     <div className="mt-5">
       <Form submitTask={submitTask} />
-      <List tasks={task} deleteTask={deleteTask}/>
+      <List tasks={task} deleteTask={deleteTask} updateTask={updateTask} />
     </div>
   );
-}
+};
 
 export default App;
