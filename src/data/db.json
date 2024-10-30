@@ -1,18 +1,18 @@
 {
   "todolist": [
     {
-      "id": "2",
-      "task": "Cleaning Room",
-      "complete": true
-    },
-    {
       "id": "0fd625f5-d9e8-499e-909f-81a7c2e9585c",
       "task": "Watching News daily",
       "complete": false
     },
     {
-      "id": "d02ba406-d5eb-4f37-9fc4-c0f4d8a51a0b",
-      "task": "Learning Spring boots",
+      "id": "ed7f082e-2bde-4d59-a21b-317d1fd0e022",
+      "task": "Cleaning bathroom",
+      "complete": false
+    },
+    {
+      "id": "d0b98f00-c07b-4a78-bf07-32174d6a725f",
+      "task": "Sleeping 6 hrs a day",
       "complete": false
     }
   ]
